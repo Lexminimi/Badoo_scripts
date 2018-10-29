@@ -1,0 +1,16 @@
+var AutoYesService;
+var x = Math.floor(Math.random() * 10000 + 1);
+
+var URLHandlerService = setInterval(URLHandler(0,x), x)
+
+function URLHandler(p,y) 
+{
+debugger;
+	AutoYesService = setInterval(AutoYes, y);
+}
+
+function AutoYes()
+	{
+		document.getElementsByClassName("js-profile-header-vote-yes")[0].click();
+		document.getElementsByClassName("js-next-button")[0].click();
+	}
